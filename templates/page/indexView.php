@@ -1,6 +1,4 @@
-<?php 
 
-require_once ('../controller/getarticlesController.php');?>
 
 <!DOCTYPE html>
 <html lang="en">
