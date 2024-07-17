@@ -4,17 +4,22 @@
 // ceci correspond a la couche modele (ce qui va interagir avec la Bdd)
 //on cree une classe 
  class ArticleRepository { 
+           // Refacto pour se connecter à la Bdd 
+    private $pdo; 
+
+    public function __construct() { 
+
+        $dbConnection= new Dbconnection();
+        $this->pdo = $dbConnection->connect();
+
+    } 
     //on cree la methode qui va faire les requetes avec la Bdd
     public function findAll() { 
 
-       
-    
-                $dbConnection= new Dbconnection();
-                $pdo = $dbConnection->connect();
                 
                 // Préparer la requête GET
                 
-                $stmt = $pdo->query("SELECT * FROM articles");
+                $stmt = $this->pdo->query("SELECT * FROM articles");
                 
                 
                 // Exécuter la requête on recupere
@@ -25,14 +30,13 @@
 
     public function insert($title,$content,$date) { 
 
-            // je me connecte a la Bdd
-            $dbConnection= new Dbconnection();
-            $pdo = $dbConnection->connect();
+      
+          
             // Préparer la requête d'insertion
             // on prepare ce que l on va executer plus loin, on prepare donc ici la requete d'insertion avant d'executer 
 
             $sql = "INSERT INTO articles (title, content, created_at) VALUES (:title, :content, :created_at)"; //avec VALUES on evite quelqu un rentre du sql
-            $stmt = $pdo->prepare($sql);
+            $stmt =$this->pdo->prepare($sql);
 
             // Définir les paramètres et exécuter
             // on definit les parametres

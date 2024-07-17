@@ -7,6 +7,7 @@ class AddArticleController {
 
 // je cree ma methode 
     public function addArticle (){
+        
 
             // je fais un var dump pour recup de maniere simulée une fois qu on a affichage on passe a la suite
             // var_dump( value: 'ajouter article');
@@ -24,7 +25,7 @@ class AddArticleController {
 
 
             $articleRepository = new ArticleRepository;
-            $articleRepository->insert($title,$content,$date); 
+            $articleRepository->insert($title,$content,$date); // on oublie pas de passer en param 
             
             // Préparer la requête d'insertion
             // on prepare ce que l on va executer plus loin, on prepare donc ici la requete d'insertion avant d'executer 
