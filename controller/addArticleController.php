@@ -28,9 +28,9 @@ class AddArticleController {
             $isRequestOk=$articleRepository->insert($title,$content,$date); // on oublie pas de passer en param 
 
             // j'appelle ma View dans mon Controller 
-            require_once('../templates/page/addArtcicleView.php');
+            require_once('../templates/page/addArticleView.php');
 
-            
+
             // Préparer la requête d'insertion
             // on prepare ce que l on va executer plus loin, on prepare donc ici la requete d'insertion avant d'executer 
             // -> Model

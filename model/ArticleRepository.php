@@ -47,7 +47,7 @@
         
             // Exécuter la requête pour affichage ici dans modele mais plus tard -> View 
 
-            // on cree un booleen qu on retourne pour voir si True ou pas
+            // on cree un booleen qu on retourne pour voir si True ou pas 
             $isRequestOk =$stmt->execute();
             return  $isRequestOk;
 

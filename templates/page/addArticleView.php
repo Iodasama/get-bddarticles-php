@@ -12,9 +12,10 @@
 
 <?php require_once ('../templates/partial/header.php');?> 
 
-<main> 
+<main id="divaddArticle"> 
 
-    <h2>Add an Article</h2>
+
+    <h2 id="addArticle">Add an Article</h2>
 
     <?php if ($isRequestOk) { ?>  
         <!-- $isRequestOk===true de base donc $isRequestOk suffit ici -->
