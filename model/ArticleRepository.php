@@ -20,7 +20,7 @@
                 // Exécuter la requête on recupere
                 $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                return $articles;
+                return $articles; // ne pas oublier de return pour la recuperation
     }
 }   
         
