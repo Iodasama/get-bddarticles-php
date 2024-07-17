@@ -14,7 +14,7 @@
 
 <main id="divaddArticle"> 
 
-
+    
     <h2 id="addArticle">Add an Article</h2>
 
     <?php if ($isRequestOk) { ?>  
@@ -23,6 +23,18 @@
         <p> Article has been saved </p>
 
     <?php }?>
+
+    <form method="post">
+            <label>
+                Title
+                <input type="text" name="title">
+            </label>
+            <label>
+                Content
+                <input type="text" name="content">
+            </label>
+            <input type="submit" value="submit">
+    </form>
 
 </main>
 
