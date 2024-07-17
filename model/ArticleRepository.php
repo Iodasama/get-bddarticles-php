@@ -47,11 +47,17 @@
         
             // Exécuter la requête pour affichage ici dans modele mais plus tard -> View 
 
-            if ($stmt->execute()) {
-                echo "Nouvel article ajouté avec succès";
-            } else {
-                echo "Erreur lors de l'ajout du produit";
-            }
+            // on cree un booleen qu on retourne pour voir si True ou pas
+            $isRequestOk =$stmt->execute();
+            return  $isRequestOk;
+
+            // if ($stmt->execute()) {
+            //     echo "Nouvel article ajouté avec succès";
+            // } else {
+            //     echo "Erreur lors de l'ajout du produit";
+            // }
+
+            // on va afficher dans addArticleView
             } 
 
 
