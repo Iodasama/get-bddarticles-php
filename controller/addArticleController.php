@@ -75,11 +75,25 @@ class AddArticleController {
 
        
     }
+
+    public function deleteArticle () { 
+        // je recupere l'id a spupprimer
+        $id = $_GET['id'];
+        //on instancie le repository pour acceder aux methodes de BDD, le controller fait appel au repository pour supprimer des données stocker dans la BDD
+        $articleRepository = new ArticleRepository();
+        //on appelle la methode pour supprimer 
+        $article = $articleRepository->deleteById($id); 
+
+        //je ramene a ma page d accueil apres avoir supprimer l article, au prealable on aura affiché un message de suppression dans le deleteArticleView
+        header("Location: http://localhost/piscine-Blog/public");
+        require_once('../templates/page/deleteArticleView.php');
+      
+    }
  
 
 }
 
 //on instancie la classe avec new 
 // on appelle la methode
-$addArticleController=new AddArticleController;
-$addArticleController->showArticle();
+// $addArticleController=new AddArticleController;
+// $addArticleController->showArticle();

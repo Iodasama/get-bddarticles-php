@@ -35,6 +35,15 @@
             </label>
             <input type="submit" value="submit">
     </form>
+<form>
+    <input name="_method" type="hidden" value="DELETE">
+
+<button type="submit" class="btn btn-danger btn-delete" id="borrar_datos">
+  <span class="btn-txtb">Delete record</span>
+</button>
+
+</form>
+
 
 </main>
 

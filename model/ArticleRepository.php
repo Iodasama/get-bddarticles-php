@@ -78,9 +78,20 @@
 
 
     }
+    public function deleteById($id){
+
+    $sql = "DELETE FROM articles WHERE id = :id";
+
+    $stmt =$this->pdo->prepare($sql);
+
+    $stmt->bindParam(':id', $id);
+
+    $stmt->execute();
 
 
-    }
+}
+
+}
       
         
         

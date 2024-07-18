@@ -10,8 +10,7 @@ class IndexController {
         $articleRepository= new ArticleRepository();
         $articles = $articleRepository->findAll();
         
-        
-        
+    
         require_once('../templates/page/indexView.php');}
     // on affiche la view de l index ou sont presents tous les articles
     }
@@ -20,8 +19,8 @@ class IndexController {
 //on instancie la classe avec new 
 // on appelle la methode
 
-$IndexController= new IndexController();
-$IndexController->index();
+// $IndexController= new IndexController();
+// $IndexController->index();
 
 
 

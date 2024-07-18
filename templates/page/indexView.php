@@ -18,7 +18,8 @@
             <section>
                 <div id="Article">Article</div>
                 <h3><?php echo $article['title'];?></h3><br>
-                <a href=" http://localhost/piscine-Blog/controller/addArticleController.php?id=<?php echo $article['id'];?>">SHOW ARTICLE</a>
+                <a href=" http://localhost/piscine-Blog/public/show-article?id=<?php echo $article['id'];?>">SHOW ARTICLE</a>
+                <a href=" http://localhost/piscine-Blog/public/delete-article?id=<?php echo $article['id'];?>">SUPPRESS ARTICLE</a>
                 <h2><?php echo $article['content'];?></h2>
                 <h3><?php echo $article['created_at'];?></h3>
                 </div> 

@@ -17,17 +17,8 @@
 
     <h2> <?php echo $article['title'];?></h2>
 
-    <form method="post">
-            <label>
-                Title
-                <input type="text" name="title">
-            </label>
-            <label>
-                Content
-                <input type="text" name="content">
-            </label>
-            <input type="submit" value="submit">
-    </form>
+       
+
 
 </main>
 
