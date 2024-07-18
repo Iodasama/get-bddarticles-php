@@ -13,7 +13,7 @@ class IndexController {
         
         
         require_once('../templates/page/indexView.php');}
-    // on affiche la view
+    // on affiche la view de l index ou sont presents tous les articles
     }
 
 

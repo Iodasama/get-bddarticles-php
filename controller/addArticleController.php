@@ -36,7 +36,7 @@ class AddArticleController {
             // j'appelle ma View dans mon Controller 
             // j'affiche les donneés
             require_once('../templates/page/addArticleView.php');
-
+    }
             // Préparer la requête d'insertion
             // on prepare ce que l on va executer plus loin, on prepare donc ici la requete d'insertion avant d'executer 
             // -> Model
@@ -61,9 +61,25 @@ class AddArticleController {
     //         echo "Erreur lors de l'ajout du produit";
     //     }
     // } 
+
+    public function showArticle (){ 
+      
+        // on recupere l'id passé dans l url de la requete
+        $id = $_GET['id'];
+        //on instancie le repository pour acceder aux methodes de BDD
+        $articleRepository = new ArticleRepository();
+        //on appelle la methode
+        $article = $articleRepository->findOneById($id); // je recupere en fonction de l'id 
+    
+        require_once('../templates/page/showArticleView.php');
+
+       
+    }
+ 
+
 }
-}
+
 //on instancie la classe avec new 
 // on appelle la methode
 $addArticleController=new AddArticleController;
-$addArticleController->addArticle();
+$addArticleController->showArticle();

@@ -61,6 +61,25 @@
             } 
 
 
+    public function findOneByID ($id) { 
+
+        // je preapre ma requete sql            
+        $sql = "SELECT * FROM articles WHERE id = :id";
+        $stmt =$this->pdo->prepare($sql);
+        // je Bind mon parametre id
+        $stmt->bindParam(':id', $id);
+        // j execute ma requete
+        $stmt->execute();
+        
+        //on recupere le resultat par id
+        $article = $stmt->fetch(PDO::FETCH_ASSOC);
+
+       return $article;
+
+
+    }
+
+
     }
       
         

@@ -214,9 +214,15 @@ footer  {
      
 }
 a {
-    color: rgb(239, 16, 16);
-    font-weight:bold;
-    text-decoration:none;
+    display: flex;
+    flex-direction: column;
+    color:#52110D;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+a:hover{ 
+    transform: rotate(180deg);
+
 }
 
 .create-articles { 
@@ -309,6 +315,42 @@ section {
 #addArticle:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
+
+#Article{ 
+
+    box-sizing: border-box;
+    width: 16%;
+    border: solid #5B6DCD 10px;
+    padding: 5px;
+
+    color:rgb(220, 0, 0) ;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #025B73;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    margin-top: 10%;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+
+
+}
+
+#Article:hover { 
+
+    transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+}
+
+#Article:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
 
 
 /*.pricesMaxMin { 

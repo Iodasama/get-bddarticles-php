@@ -16,8 +16,9 @@
             <!-- On boucle pour recuperer les articles pour les afficher-->
             <?php foreach ($articles as $article) { ?> 
             <section>
-                <h3>Article</h3>
-                <h3><?php echo $article['title'];?></h3> 
+                <div id="Article">Article</div>
+                <h3><?php echo $article['title'];?></h3><br>
+                <a href=" http://localhost/piscine-Blog/controller/addArticleController.php?id=<?php echo $article['id'];?>">SHOW ARTICLE</a>
                 <h2><?php echo $article['content'];?></h2>
                 <h3><?php echo $article['created_at'];?></h3>
                 </div> 
