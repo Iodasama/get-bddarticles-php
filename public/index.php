@@ -24,7 +24,7 @@ if($endUri === "") {
     $addArticleController = new AddArticleController();
     $addArticleController->showArticle(); 
 
-} else if ($endUri === "delete-article") {  
+} else if ($endUri === "delete-article") {  //quand l'url est appelée 
 
 //j'instancie et j'appelle ma methode delete
     $addArticleController = new AddArticleController();

@@ -10,11 +10,17 @@ class IndexController {
         $articleRepository= new ArticleRepository();
         $articles = $articleRepository->findAll();
         
+
+        // require_once('../templates/page/indexView.php');} est remplacé par deux lignes de commande twig
+        $loader = new \Twig\Loader\FilesystemLoader('../templates');
+        $twig = new \Twig\Environment($loader);
     
-        require_once('../templates/page/indexView.php');}
+        echo $twig->render('page/index.html.twig', ['articles'=>$articles]);
+      
+
     // on affiche la view de l index ou sont presents tous les articles
     }
-
+}
 
 //on instancie la classe avec new 
 // on appelle la methode

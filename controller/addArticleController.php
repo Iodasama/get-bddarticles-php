@@ -72,12 +72,12 @@ class AddArticleController {
         $article = $articleRepository->findOneById($id); // je recupere en fonction de l'id 
     
         require_once('../templates/page/showArticleView.php');
-
+     
        
     }
 
     public function deleteArticle () { 
-        // je recupere l'id a spupprimer
+        // je recupere l'id à supprimer
         $id = $_GET['id'];
         //on instancie le repository pour acceder aux methodes de BDD, le controller fait appel au repository pour supprimer des données stocker dans la BDD
         $articleRepository = new ArticleRepository();
@@ -86,7 +86,7 @@ class AddArticleController {
 
         //je ramene a ma page d accueil apres avoir supprimer l article, au prealable on aura affiché un message de suppression dans le deleteArticleView
         header("Location: http://localhost/piscine-Blog/public");
-        require_once('../templates/page/deleteArticleView.php');
+        //pas besoin de require vu qu on a une redirection
       
     }
  
