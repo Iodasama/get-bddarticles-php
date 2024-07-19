@@ -35,7 +35,14 @@ class AddArticleController {
 
             // j'appelle ma View dans mon Controller 
             // j'affiche les donneés
-            require_once('../templates/page/addArticleView.php');
+            
+            
+            // on remplace le require_once('../templates/page/addArticleView.php');
+            $loader = new \Twig\Loader\FilesystemLoader('../templates'); //apres avoir chargé Twig il attend le chemin vers tous les templates, voici ou sont passés mes fichiers twig
+            $twig = new \Twig\Environment($loader); // on crée objet twig
+        
+            echo $twig->render('page/addArticleView.html.twig', ['isRequestOk'=>$isRequestOk]);
+            
     }
             // Préparer la requête d'insertion
             // on prepare ce que l on va executer plus loin, on prepare donc ici la requete d'insertion avant d'executer 
@@ -71,7 +78,11 @@ class AddArticleController {
         //on appelle la methode
         $article = $articleRepository->findOneById($id); // je recupere en fonction de l'id 
     
-        require_once('../templates/page/showArticleView.php');
+        // on remplace le require_once('../templates/page/showArticleView.php');
+        $loader = new \Twig\Loader\FilesystemLoader('../templates'); //apres avoir chargé Twig il attend le chemin vers tous les templates, voici ou sont passés mes fichiers twig
+        $twig = new \Twig\Environment($loader); // on crée objet twig
+    
+        echo $twig->render('page/showArticleView.html.twig', ['article'=>$article]);
      
        
     }

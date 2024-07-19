@@ -7,7 +7,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_set_cookie_params(60); 
-require_once '../vendor/autoload.php';
+require_once '../vendor/autoload.php'; 
 
 // // on se connecte a la BDD, connection entre Php et Sql
 // // on check que le local host et le password sont bons, 8889 pour mac et root par defaut (peutetre changé)
