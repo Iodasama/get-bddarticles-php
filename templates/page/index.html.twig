@@ -1,1 +1,17 @@
-<h1>yo</h1>
+<h1>Yo</h1>
+
+ <main> 
+            <h1>THE BEST JAPANESE DRAMA RELEASED</h1>
+            <!-- On boucle pour recuperer les articles pour les afficher-->
+            {%for article in articles%}
+            <section>
+                <div id="Article">Article</div>
+                <h3>{{article.title}}></h3><br>
+                <a href=" http://localhost/piscine-Blog/public/show-article?id={{article.id}}">SHOW ARTICLE</a>
+                <a href=" http://localhost/piscine-Blog/public/delete-article?id={{article.id}}">SUPPRESS ARTICLE</a>
+                <h2>{{article.content}}</h2>
+                <h3>{{article.created_at}}</h3>
+                </div> 
+             </section>
+             {%endfor%}       <!-- ne pas separer end & for -> toujours endfor -->
+</main>

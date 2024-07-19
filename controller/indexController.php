@@ -12,10 +12,10 @@ class IndexController {
         
 
         // require_once('../templates/page/indexView.php');} est remplacé par deux lignes de commande twig
-        $loader = new \Twig\Loader\FilesystemLoader('../templates');
-        $twig = new \Twig\Environment($loader);
+        $loader = new \Twig\Loader\FilesystemLoader('../templates'); //apres avoir chargé Twig il attend le chemin vers tous les templates, voici ou sont passés mes fichiers twig
+        $twig = new \Twig\Environment($loader); // on crée objet twig
     
-        echo $twig->render('page/index.html.twig', ['articles'=>$articles]);
+        echo $twig->render('page/index.html.twig', ['articles'=>$articles]);// on fait un render
       
 
     // on affiche la view de l index ou sont presents tous les articles
