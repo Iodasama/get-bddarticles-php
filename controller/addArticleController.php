@@ -82,7 +82,7 @@ class AddArticleController {
         $loader = new \Twig\Loader\FilesystemLoader('../templates'); //apres avoir chargé Twig il attend le chemin vers tous les templates, voici ou sont passés mes fichiers twig
         $twig = new \Twig\Environment($loader); // on crée objet twig
     
-        echo $twig->render('page/showArticleView.html.twig', ['article'=>$article]);
+        echo $twig->render('page/showArticleView.html.twig', ['article'=>$article]); // si dans le fichier twig on appelle toto alors ici ca sera toto egalement ['toto'=>$article]
      
        
     }
@@ -97,7 +97,15 @@ class AddArticleController {
 
         //je ramene a ma page d accueil apres avoir supprimer l article, au prealable on aura affiché un message de suppression dans le deleteArticleView
         header("Location: http://localhost/piscine-Blog/public");
+
+        // $loader = new \Twig\Loader\FilesystemLoader('../templates'); //apres avoir chargé Twig il attend le chemin vers tous les templates, voici ou sont passés mes fichiers twig
+        // $twig = new \Twig\Environment($loader); // on crée objet twig
+    
+        // echo $twig->render('page/deleteArticleView.html.twig', ['article'=>$article]);
+     
+       
         //pas besoin de require vu qu on a une redirection
+        
       
     }
  

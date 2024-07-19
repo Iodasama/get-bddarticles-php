@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon super blog</title>
-    <link rel="stylesheet" type="text/css" href="../public/assets/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-</head>
-<body>
-        {% include('partial/header.html.twig') %}
+{% extends "partial/base.html.twig" %}
+
+
+{% block content %}
+        {# {% include('partial/header.html.twig') %} #}
         <main> 
             <h1>THE BEST JAPANESE DRAMA RELEASED</h1>
             <!-- On boucle pour recuperer les articles pour les afficher-->
             {% for article in articles %}
             <section>
                 <div id="Article">Article</div>
-                <h3>{{article.title}}></h3><br>
+                <h3>{{article.title}}</h3><br>
                 <a href=" http://localhost/piscine-Blog/public/show-article?id={{article.id}}">SHOW ARTICLE</a>
                 <a href=" http://localhost/piscine-Blog/public/delete-article?id={{article.id}}">SUPPRESS ARTICLE</a>
                 <h2>{{article.content}}</h2>
@@ -24,6 +18,11 @@
              </section>
              {% endfor %}   <!-- ne pas separer end & for -> toujours endfor -->
         </main>
-        {% include('partial/footer.html.twig') %}
-</body>
-</html>
+        {# {% include('partial/footer.html.twig') %} #}
+{% endblock %}    
+
+
+
+
+
+
