@@ -351,7 +351,21 @@ section {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
-
+#sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 85px;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    background: #29a2b5;
+    padding: 25px 20px;
+    color: aliceblue;
+    text-align:left;
+   }
+   
 
 /*.pricesMaxMin { 
 
